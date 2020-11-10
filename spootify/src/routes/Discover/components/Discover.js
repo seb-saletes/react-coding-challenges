@@ -1,21 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import DiscoverBlock from './DiscoverBlock/components/DiscoverBlock';
 import '../styles/_discover.scss';
 
-export default class Discover extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      newReleases: [],
-      playlists: [],
-      categories: []
-    };
-  }
-
-  render() {
-    const { newReleases, playlists, categories } = this.state;
-
+export default () => {
     return (
       <div className="discover">
         <DiscoverBlock text="RELEASED THIS WEEK" id="released" data={newReleases} />
@@ -23,5 +10,4 @@ export default class Discover extends Component {
         <DiscoverBlock text="BROWSE" id="browse" data={categories} imagesKey="icons" />
       </div>
     );
-  }
 }
